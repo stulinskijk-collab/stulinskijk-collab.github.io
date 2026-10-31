@@ -3,243 +3,190 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Портфолио — сайты и веб-приложения</title>
-<meta name="description" content="11 работ: концепт-сайты для студий и сервисов и веб-приложение. Вёрстка с нуля, анимации, онлайн-запись.">
+<title>Портфолио — сайты для малого бизнеса</title>
+<meta name="description" content="11 работ: концепт-сайты для студий и сервисов и веб-приложение. Свой дизайн для каждой ниши, фото, онлайн-запись, адаптив.">
+<meta name="theme-color" content="#0D0E10">
 <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@700;900&family=Manrope:wght@400;600;700;800&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geologica:wght@400;500;600&family=Unbounded:wght@700;900&family=JetBrains+Mono:wght@500&display=swap">
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
 <header class="top">
   <div class="wrap top-in">
-    <a href="#" class="logo">портфолио<span>.</span></a>
-    <nav aria-label="Разделы"><a href="#works">Работы</a><a href="#contacts">Контакты</a></nav>
+    <a href="#" class="logo">Портфолио<sup>©</sup></a>
+    <nav class="nav" aria-label="Разделы">
+      <a class="pill pill-sm" href="#works">Работы</a>
+      <a class="pill pill-sm" href="#all">Все проекты</a>
+      <a class="pill pill-sm" href="#process">Как работаю</a>
+    </nav>
+    <a class="pill pill-light pill-sm" href="#contacts">Обсудить сайт</a>
   </div>
 </header>
 
 <main>
-  <section class="hero wrap">
-    <h1 class="reveal">Сайты, которые <em>хочется</em> листать</h1>
-    <p class="lead reveal">Концепт-сайты для студий и сервисов и одно веб-приложение. Всё свёрстано с нуля, без конструкторов: свои иллюстрации, анимации и онлайн-запись.</p>
-    <ul class="stats reveal">
-      <li><b>11</b><span>работ</span></li>
-      <li><b>10</b><span>лендингов</span></li>
-      <li><b>0</b><span>конструкторов</span></li>
-    </ul>
+  <section class="hero">
+    <div class="glow" aria-hidden="true"></div>
+    <div class="wrap hero-grid">
+      <div class="reveal">
+        <p class="label">Сайты · дизайн · вёрстка</p>
+        <h1>Сайты для малого бизнеса</h1>
+        <p class="lead">Лендинги для студий и сервисов и одно веб-приложение. У каждого сайта свой стиль под нишу, живые фото и онлайн-запись. Без конструкторов.</p>
+        <div class="cta"><a class="pill pill-light" href="#contacts">Обсудить сайт</a><a class="pill" href="#works">Смотреть работы</a></div>
+      </div>
+      <ul class="stats reveal">
+        <li><b>11</b><span>работ в портфолио</span></li>
+        <li><b>8</b><span>разных стилей</span></li>
+        <li><b>0</b><span>конструкторов</span></li>
+      </ul>
+    </div>
+    <p class="mark" aria-hidden="true">Портфолио</p>
   </section>
 
-  <section class="wrap" id="works">
-    <div class="filters" role="group" aria-label="Фильтр работ">
-      <button class="chip is-on" data-f="all" aria-pressed="true">Все<small>11</small></button>
-      <button class="chip" data-f="land" aria-pressed="false">Лендинги<small>10</small></button>
-      <button class="chip" data-f="app" aria-pressed="false">Приложения<small>1</small></button>
+  <section class="works" id="works">
+    <div class="glow" aria-hidden="true"></div>
+    <div class="wrap">
+      <div class="sec-top">
+        <h2>Работы</h2>
+        <div class="filters" role="group" aria-label="Фильтр работ">
+          <button class="pill pill-sm is-on" data-f="all" aria-pressed="true">Все</button>
+          <button class="pill pill-sm" data-f="serv" aria-pressed="false">Мастерские</button>
+          <button class="pill pill-sm" data-f="leis" aria-pressed="false">Отдых и хобби</button>
+        </div>
+        <a class="more" href="#all">Все проекты <span aria-hidden="true">→</span></a>
+      </div>
+      <div class="row">
+      <a class="work" href="https://stulinskijk-collab.github.io/boroda/" target="_blank" rel="noopener" data-cat="serv" style="--c:#C9A24B">
+        <div class="stage"><div class="dev phone"><img src="img/m-boroda.png" alt="Сайт «Борода» в макете устройства" loading="lazy"></div></div>
+        <h3>Борода</h3>
+        <p>Барбершоп · Казань</p>
+      </a>
+      <a class="work" href="https://stulinskijk-collab.github.io/tishe/" target="_blank" rel="noopener" data-cat="leis" style="--c:#7FA88E">
+        <div class="stage"><div class="dev laptop"><div class="scr"><img src="img/tishe.png" alt="Сайт «Тише» в макете устройства" loading="lazy"></div></div></div>
+        <h3>Тише</h3>
+        <p>Студия йоги · Сочи</p>
+      </a>
+      <a class="work" href="https://stulinskijk-collab.github.io/igla/" target="_blank" rel="noopener" data-cat="serv" style="--c:#F2EEE6">
+        <div class="stage"><div class="dev tablet"><img src="img/t-igla.png" alt="Сайт «Игла» в макете устройства" loading="lazy"></div></div>
+        <h3>Игла</h3>
+        <p>Тату-студия · Петербург</p>
+      </a>
+      <a class="work" href="https://stulinskijk-collab.github.io/gul/" target="_blank" rel="noopener" data-cat="leis" style="--c:#9B7BFF">
+        <div class="stage"><div class="dev tablet"><img src="img/t-gul.png" alt="Сайт «Гул» в макете устройства" loading="lazy"></div></div>
+        <h3>Гул</h3>
+        <p>Студия звукозаписи · Пермь</p>
+      </a>
+      </div>
+      <div class="row rev">
+      <a class="work" href="https://stulinskijk-collab.github.io/spica/" target="_blank" rel="noopener" data-cat="serv" style="--c:#C8F23A">
+        <div class="stage"><div class="dev tablet"><img src="img/t-spica.png" alt="Сайт «Спица» в макете устройства" loading="lazy"></div></div>
+        <h3>Спица</h3>
+        <p>Веломастерская · Екатеринбург</p>
+      </a>
+      <a class="work" href="https://stulinskijk-collab.github.io/par/" target="_blank" rel="noopener" data-cat="leis" style="--c:#F08A3C">
+        <div class="stage"><div class="dev tablet"><img src="img/t-par.png" alt="Сайт «Пар» в макете устройства" loading="lazy"></div></div>
+        <h3>Пар</h3>
+        <p>Банный клуб · Тюмень</p>
+      </a>
+      <a class="work" href="https://stulinskijk-collab.github.io/korzh/" target="_blank" rel="noopener" data-cat="leis" style="--c:#E87A93">
+        <div class="stage"><div class="dev laptop"><div class="scr"><img src="img/korzh.png" alt="Сайт «Корж» в макете устройства" loading="lazy"></div></div></div>
+        <h3>Корж</h3>
+        <p>Школа выпечки · Москва</p>
+      </a>
+      <a class="work" href="https://stulinskijk-collab.github.io/pushok/" target="_blank" rel="noopener" data-cat="serv" style="--c:#5CC8F2">
+        <div class="stage"><div class="dev phone"><img src="img/m-pushok.png" alt="Сайт «Пушок» в макете устройства" loading="lazy"></div></div>
+        <h3>Пушок</h3>
+        <p>Груминг-салон · Новосибирск</p>
+      </a>
+      </div>
     </div>
-    <div class="grid">
-      <article class="card reveal" data-cat="land" style="--c1:#FF3D9A;animation-delay:0ms">
-        <a class="shot" href="https://stulinskijk-collab.github.io/hlop/" target="_blank" rel="noopener" aria-label="Открыть сайт «Хлоп»">
-          <span class="bar" aria-hidden="true"><i></i><i></i><i></i></span>
-          <img src="img/hlop.png" alt="Первый экран сайта «Хлоп»" loading="eager" width="1280" height="800">
-          <span class="go" aria-hidden="true">Открыть ↗</span>
-        </a>
-        <div class="info">
-          <div class="info-top">
-            <div><h3>Хлоп</h3><p class="kind">студия бровей и ресниц · Красноярск</p></div>
-            <span class="dots" aria-hidden="true"><i style="background:#FF3D9A"></i><i style="background:#FFE45C"></i><i style="background:#3C3CF5"></i><i style="background:#7CF0B8"></i></span>
-          </div>
-          <p class="desc">Глаз в первом экране следит за курсором и моргает, прайс по вкладкам, запись в 4 шага с конфетти.</p>
-          <ul class="tags"><li>лендинг</li><li>онлайн-запись</li><li>анимации</li></ul>
-          <div class="links"><a href="https://stulinskijk-collab.github.io/hlop/" target="_blank" rel="noopener">Открыть сайт ↗</a><a href="https://github.com/stulinskijk-collab/hlop" target="_blank" rel="noopener">Код на GitHub</a></div>
-        </div>
-      </article>
-      <article class="card reveal" data-cat="land" style="--c1:#14110E;animation-delay:60ms">
-        <a class="shot" href="https://stulinskijk-collab.github.io/boroda/" target="_blank" rel="noopener" aria-label="Открыть сайт «Борода»">
-          <span class="bar" aria-hidden="true"><i></i><i></i><i></i></span>
-          <img src="img/boroda.png" alt="Первый экран сайта «Борода»" loading="eager" width="1280" height="800">
-          <span class="go" aria-hidden="true">Открыть ↗</span>
-        </a>
-        <div class="info">
-          <div class="info-top">
-            <div><h3>Борода</h3><p class="kind">барбершоп · Казань</p></div>
-            <span class="dots" aria-hidden="true"><i style="background:#14110E"></i><i style="background:#C9A24B"></i><i style="background:#F3E9D2"></i><i style="background:#0E0C0A"></i></span>
-          </div>
-          <p class="desc">Мужские стрижки и борода за час. Горячее полотенце, опасная бритва и честный прайс без «от».</p>
-          <ul class="tags"><li>лендинг</li><li>тёмный клуб</li><li>фото</li><li>онлайн-запись</li></ul>
-          <div class="links"><a href="https://stulinskijk-collab.github.io/boroda/" target="_blank" rel="noopener">Открыть сайт ↗</a><a href="https://github.com/stulinskijk-collab/boroda" target="_blank" rel="noopener">Код на GitHub</a></div>
-        </div>
-      </article>
-      <article class="card reveal" data-cat="land" style="--c1:#F6F2EA;animation-delay:120ms">
-        <a class="shot" href="https://stulinskijk-collab.github.io/tishe/" target="_blank" rel="noopener" aria-label="Открыть сайт «Тише»">
-          <span class="bar" aria-hidden="true"><i></i><i></i><i></i></span>
-          <img src="img/tishe.png" alt="Первый экран сайта «Тише»" loading="lazy" width="1280" height="800">
-          <span class="go" aria-hidden="true">Открыть ↗</span>
-        </a>
-        <div class="info">
-          <div class="info-top">
-            <div><h3>Тише</h3><p class="kind">студия йоги · Сочи</p></div>
-            <span class="dots" aria-hidden="true"><i style="background:#F6F2EA"></i><i style="background:#7FA88E"></i><i style="background:#E9DFC9"></i><i style="background:#2D4A41"></i></span>
-          </div>
-          <p class="desc">Небольшие группы до восьми человек, тёплый зал с видом на море и преподаватели, которые помнят ваше имя.</p>
-          <ul class="tags"><li>лендинг</li><li>минимализм</li><li>фото</li><li>онлайн-запись</li></ul>
-          <div class="links"><a href="https://stulinskijk-collab.github.io/tishe/" target="_blank" rel="noopener">Открыть сайт ↗</a><a href="https://github.com/stulinskijk-collab/tishe" target="_blank" rel="noopener">Код на GitHub</a></div>
-        </div>
-      </article>
-      <article class="card reveal" data-cat="land" style="--c1:#F2EEE6;animation-delay:180ms">
-        <a class="shot" href="https://stulinskijk-collab.github.io/igla/" target="_blank" rel="noopener" aria-label="Открыть сайт «Игла»">
-          <span class="bar" aria-hidden="true"><i></i><i></i><i></i></span>
-          <img src="img/igla.png" alt="Первый экран сайта «Игла»" loading="lazy" width="1280" height="800">
-          <span class="go" aria-hidden="true">Открыть ↗</span>
-        </a>
-        <div class="info">
-          <div class="info-top">
-            <div><h3>Игла</h3><p class="kind">тату-студия · Петербург</p></div>
-            <span class="dots" aria-hidden="true"><i style="background:#F2EEE6"></i><i style="background:#F2EEE6"></i><i style="background:#FF3B1F"></i><i style="background:#0D0D0D"></i></span>
-          </div>
-          <p class="desc">Рисуем эскиз под вас, бьём в стерильной студии и честно говорим, если идея не сработает на коже.</p>
-          <ul class="tags"><li>лендинг</li><li>брутализм</li><li>фото</li><li>онлайн-запись</li></ul>
-          <div class="links"><a href="https://stulinskijk-collab.github.io/igla/" target="_blank" rel="noopener">Открыть сайт ↗</a><a href="https://github.com/stulinskijk-collab/igla" target="_blank" rel="noopener">Код на GitHub</a></div>
-        </div>
-      </article>
-      <article class="card reveal" data-cat="land" style="--c1:#5CC8F2;animation-delay:240ms">
-        <a class="shot" href="https://stulinskijk-collab.github.io/pushok/" target="_blank" rel="noopener" aria-label="Открыть сайт «Пушок»">
-          <span class="bar" aria-hidden="true"><i></i><i></i><i></i></span>
-          <img src="img/pushok.png" alt="Первый экран сайта «Пушок»" loading="lazy" width="1280" height="800">
-          <span class="go" aria-hidden="true">Открыть ↗</span>
-        </a>
-        <div class="info">
-          <div class="info-top">
-            <div><h3>Пушок</h3><p class="kind">груминг-салон · Новосибирск</p></div>
-            <span class="dots" aria-hidden="true"><i style="background:#5CC8F2"></i><i style="background:#5CC8F2"></i><i style="background:#FFD93B"></i><i style="background:#FF6B3D"></i></span>
-          </div>
-          <p class="desc">Стрижём и моем собак и кошек без спешки и без успокоительных. Пришлём фото, пока питомец у нас.</p>
-          <ul class="tags"><li>лендинг</li><li>наклейки</li><li>фото</li><li>онлайн-запись</li></ul>
-          <div class="links"><a href="https://stulinskijk-collab.github.io/pushok/" target="_blank" rel="noopener">Открыть сайт ↗</a><a href="https://github.com/stulinskijk-collab/pushok" target="_blank" rel="noopener">Код на GitHub</a></div>
-        </div>
-      </article>
-      <article class="card reveal" data-cat="land" style="--c1:#111111;animation-delay:300ms">
-        <a class="shot" href="https://stulinskijk-collab.github.io/spica/" target="_blank" rel="noopener" aria-label="Открыть сайт «Спица»">
-          <span class="bar" aria-hidden="true"><i></i><i></i><i></i></span>
-          <img src="img/spica.png" alt="Первый экран сайта «Спица»" loading="lazy" width="1280" height="800">
-          <span class="go" aria-hidden="true">Открыть ↗</span>
-        </a>
-        <div class="info">
-          <div class="info-top">
-            <div><h3>Спица</h3><p class="kind">веломастерская · Екатеринбург</p></div>
-            <span class="dots" aria-hidden="true"><i style="background:#111111"></i><i style="background:#C8F23A"></i><i style="background:#C8F23A"></i><i style="background:#0B0B0B"></i></span>
-          </div>
-          <p class="desc">Чиним велосипеды и самокаты за день. Показываем изношенные детали и не меняем то, что ещё поездит.</p>
-          <ul class="tags"><li>лендинг</li><li>индустриальный</li><li>фото</li><li>онлайн-запись</li></ul>
-          <div class="links"><a href="https://stulinskijk-collab.github.io/spica/" target="_blank" rel="noopener">Открыть сайт ↗</a><a href="https://github.com/stulinskijk-collab/spica" target="_blank" rel="noopener">Код на GitHub</a></div>
-        </div>
-      </article>
-      <article class="card reveal" data-cat="land" style="--c1:#FBF4EA;animation-delay:360ms">
-        <a class="shot" href="https://stulinskijk-collab.github.io/korzh/" target="_blank" rel="noopener" aria-label="Открыть сайт «Корж»">
-          <span class="bar" aria-hidden="true"><i></i><i></i><i></i></span>
-          <img src="img/korzh.png" alt="Первый экран сайта «Корж»" loading="lazy" width="1280" height="800">
-          <span class="go" aria-hidden="true">Открыть ↗</span>
-        </a>
-        <div class="info">
-          <div class="info-top">
-            <div><h3>Корж</h3><p class="kind">кулинарная школа · Москва</p></div>
-            <span class="dots" aria-hidden="true"><i style="background:#FBF4EA"></i><i style="background:#E87A93"></i><i style="background:#FFF3D6"></i><i style="background:#5A2E22"></i></span>
-          </div>
-          <p class="desc">Готовим вместе за большим столом: от теста до красивого среза. Всё испечённое забираете домой в коробке.</p>
-          <ul class="tags"><li>лендинг</li><li>журнал</li><li>фото</li><li>онлайн-запись</li></ul>
-          <div class="links"><a href="https://stulinskijk-collab.github.io/korzh/" target="_blank" rel="noopener">Открыть сайт ↗</a><a href="https://github.com/stulinskijk-collab/korzh" target="_blank" rel="noopener">Код на GitHub</a></div>
-        </div>
-      </article>
-      <article class="card reveal" data-cat="land" style="--c1:#211611;animation-delay:360ms">
-        <a class="shot" href="https://stulinskijk-collab.github.io/par/" target="_blank" rel="noopener" aria-label="Открыть сайт «Пар»">
-          <span class="bar" aria-hidden="true"><i></i><i></i><i></i></span>
-          <img src="img/par.png" alt="Первый экран сайта «Пар»" loading="lazy" width="1280" height="800">
-          <span class="go" aria-hidden="true">Открыть ↗</span>
-        </a>
-        <div class="info">
-          <div class="info-top">
-            <div><h3>Пар</h3><p class="kind">банный клуб · Тюмень</p></div>
-            <span class="dots" aria-hidden="true"><i style="background:#211611"></i><i style="background:#F08A3C"></i><i style="background:#F5E6CF"></i><i style="background:#1A110C"></i></span>
-          </div>
-          <p class="desc">Русская баня на берёзовых дровах, парильщики с вениками из своего леса и купель с ледяной водой.</p>
-          <ul class="tags"><li>лендинг</li><li>деревенский</li><li>фото</li><li>онлайн-запись</li></ul>
-          <div class="links"><a href="https://stulinskijk-collab.github.io/par/" target="_blank" rel="noopener">Открыть сайт ↗</a><a href="https://github.com/stulinskijk-collab/par" target="_blank" rel="noopener">Код на GitHub</a></div>
-        </div>
-      </article>
-      <article class="card reveal" data-cat="land" style="--c1:#0B0A1A;animation-delay:360ms">
-        <a class="shot" href="https://stulinskijk-collab.github.io/gul/" target="_blank" rel="noopener" aria-label="Открыть сайт «Гул»">
-          <span class="bar" aria-hidden="true"><i></i><i></i><i></i></span>
-          <img src="img/gul.png" alt="Первый экран сайта «Гул»" loading="lazy" width="1280" height="800">
-          <span class="go" aria-hidden="true">Открыть ↗</span>
-        </a>
-        <div class="info">
-          <div class="info-top">
-            <div><h3>Гул</h3><p class="kind">студия звукозаписи · Пермь</p></div>
-            <span class="dots" aria-hidden="true"><i style="background:#0B0A1A"></i><i style="background:#9B7BFF"></i><i style="background:#E9FF4A"></i><i style="background:#07061A"></i></span>
-          </div>
-          <p class="desc">Записываем вокал, группы и подкасты в зале с настоящей акустикой. Сведём трек так, что не стыдно отправить на лейбл.</p>
-          <ul class="tags"><li>лендинг</li><li>неон</li><li>фото</li><li>онлайн-запись</li></ul>
-          <div class="links"><a href="https://stulinskijk-collab.github.io/gul/" target="_blank" rel="noopener">Открыть сайт ↗</a><a href="https://github.com/stulinskijk-collab/gul" target="_blank" rel="noopener">Код на GitHub</a></div>
-        </div>
-      </article>
-      <article class="card reveal" data-cat="land" style="--c1:#0B0B0B;animation-delay:360ms">
-        <a class="shot" href="https://stulinskijk-collab.github.io/ostrov/%D0%9E%D1%81%D1%82%D0%BE%D0%B2%20%E2%80%94%20%D0%BE%D0%B1%D1%8A%D0%B5%D0%BA%D1%82%D1%8B.html" target="_blank" rel="noopener" aria-label="Открыть сайт «Остов»">
-          <span class="bar" aria-hidden="true"><i></i><i></i><i></i></span>
-          <img src="img/ostrov.png" alt="Первый экран сайта «Остов»" loading="lazy" width="1280" height="800">
-          <span class="go" aria-hidden="true">Открыть ↗</span>
-        </a>
-        <div class="info">
-          <div class="info-top">
-            <div><h3>Остов</h3><p class="kind">студия предметов из гипса и бетона · Красноярск</p></div>
-            <span class="dots" aria-hidden="true"><i style="background:#0B0B0B"></i><i style="background:#F2F2F2"></i><i style="background:#8A8A8A"></i></span>
-          </div>
-          <p class="desc">Чёрно-белая витрина с вращающимся 3D-объектом, каталогом и корзиной.</p>
-          <ul class="tags"><li>витрина</li><li>3D</li><li>корзина</li></ul>
-          <div class="links"><a href="https://stulinskijk-collab.github.io/ostrov/%D0%9E%D1%81%D1%82%D0%BE%D0%B2%20%E2%80%94%20%D0%BE%D0%B1%D1%8A%D0%B5%D0%BA%D1%82%D1%8B.html" target="_blank" rel="noopener">Открыть сайт ↗</a><a href="https://github.com/stulinskijk-collab/ostrov" target="_blank" rel="noopener">Код на GitHub</a></div>
-        </div>
-      </article>
-      <article class="card reveal" data-cat="app" style="--c1:#12141C;animation-delay:360ms">
-        <a class="shot phone" href="https://stulinskijk-collab.github.io/tracker/" target="_blank" rel="noopener" aria-label="Открыть сайт «Трекер»">
-          <span class="bar" aria-hidden="true"><i></i><i></i><i></i></span>
-          <img src="img/tracker.png" alt="Первый экран сайта «Трекер»" loading="lazy" width="1280" height="800">
-          <span class="go" aria-hidden="true">Открыть ↗</span>
-        </a>
-        <div class="info">
-          <div class="info-top">
-            <div><h3>Трекер</h3><p class="kind">веб-приложение</p></div>
-            <span class="dots" aria-hidden="true"><i style="background:#12141C"></i><i style="background:#4F46E5"></i><i style="background:#818CF8"></i><i style="background:#16A34A"></i></span>
-          </div>
-          <p class="desc">Трекер, который помогает начинать дела и не бросать их. Помнит пользователя на устройстве, светлая и тёмная тема.</p>
-          <ul class="tags"><li>приложение</li><li>localStorage</li><li>тёмная тема</li></ul>
-          <div class="links"><a href="https://stulinskijk-collab.github.io/tracker/" target="_blank" rel="noopener">Открыть сайт ↗</a><a href="https://github.com/stulinskijk-collab/tracker" target="_blank" rel="noopener">Код на GitHub</a></div>
-        </div>
-      </article>
+  </section>
+
+  <section class="wrap" id="all">
+    <div class="sec-top"><h2>Все проекты</h2><span class="label">11 работ</span></div>
+    <div class="list">
+      <a class="item" href="https://stulinskijk-collab.github.io/hlop/" target="_blank" rel="noopener" data-shot="img/hlop.png">
+        <span class="n">01</span><b>Хлоп</b><span class="d">Студия бровей и ресниц</span><span class="t">Лендинг</span><span class="go" aria-hidden="true">→</span>
+      </a>
+      <a class="item" href="https://stulinskijk-collab.github.io/boroda/" target="_blank" rel="noopener" data-shot="img/boroda.png">
+        <span class="n">02</span><b>Борода</b><span class="d">Барбершоп</span><span class="t">Лендинг</span><span class="go" aria-hidden="true">→</span>
+      </a>
+      <a class="item" href="https://stulinskijk-collab.github.io/tishe/" target="_blank" rel="noopener" data-shot="img/tishe.png">
+        <span class="n">03</span><b>Тише</b><span class="d">Студия йоги</span><span class="t">Лендинг</span><span class="go" aria-hidden="true">→</span>
+      </a>
+      <a class="item" href="https://stulinskijk-collab.github.io/igla/" target="_blank" rel="noopener" data-shot="img/igla.png">
+        <span class="n">04</span><b>Игла</b><span class="d">Тату-студия</span><span class="t">Лендинг</span><span class="go" aria-hidden="true">→</span>
+      </a>
+      <a class="item" href="https://stulinskijk-collab.github.io/gul/" target="_blank" rel="noopener" data-shot="img/gul.png">
+        <span class="n">05</span><b>Гул</b><span class="d">Студия звукозаписи</span><span class="t">Лендинг</span><span class="go" aria-hidden="true">→</span>
+      </a>
+      <a class="item" href="https://stulinskijk-collab.github.io/spica/" target="_blank" rel="noopener" data-shot="img/spica.png">
+        <span class="n">06</span><b>Спица</b><span class="d">Веломастерская</span><span class="t">Лендинг</span><span class="go" aria-hidden="true">→</span>
+      </a>
+      <a class="item" href="https://stulinskijk-collab.github.io/par/" target="_blank" rel="noopener" data-shot="img/par.png">
+        <span class="n">07</span><b>Пар</b><span class="d">Банный клуб</span><span class="t">Лендинг</span><span class="go" aria-hidden="true">→</span>
+      </a>
+      <a class="item" href="https://stulinskijk-collab.github.io/korzh/" target="_blank" rel="noopener" data-shot="img/korzh.png">
+        <span class="n">08</span><b>Корж</b><span class="d">Школа выпечки</span><span class="t">Лендинг</span><span class="go" aria-hidden="true">→</span>
+      </a>
+      <a class="item" href="https://stulinskijk-collab.github.io/pushok/" target="_blank" rel="noopener" data-shot="img/pushok.png">
+        <span class="n">09</span><b>Пушок</b><span class="d">Груминг-салон</span><span class="t">Лендинг</span><span class="go" aria-hidden="true">→</span>
+      </a>
+      <a class="item" href="https://stulinskijk-collab.github.io/ostrov/%D0%9E%D1%81%D1%82%D0%BE%D0%B2%20%E2%80%94%20%D0%BE%D0%B1%D1%8A%D0%B5%D0%BA%D1%82%D1%8B.html" target="_blank" rel="noopener" data-shot="img/ostrov.png">
+        <span class="n">10</span><b>Остов</b><span class="d">Предметы из гипса и бетона</span><span class="t">Витрина с корзиной</span><span class="go" aria-hidden="true">→</span>
+      </a>
+      <a class="item" href="https://stulinskijk-collab.github.io/tracker/" target="_blank" rel="noopener" data-shot="img/tracker.png">
+        <span class="n">11</span><b>Трекер</b><span class="d">Трекер привычек</span><span class="t">Веб-приложение</span><span class="go" aria-hidden="true">→</span>
+      </a>
+    </div>
+  </section>
+
+  <section class="process" id="process">
+    <div class="glow" aria-hidden="true"></div>
+    <div class="wrap">
+      <p class="label">Как работаю</p>
+      <h2>От задачи до сайта на телефоне клиента</h2>
+      <p class="lead">Пять шагов. На каждом показываю результат, а не обещания.</p>
+      <div class="line" aria-hidden="true"><i style="left:10%"></i><i style="left:30%"></i><i style="left:50%"></i><i style="left:70%"></i><i style="left:90%"></i></div>
+      <ol class="steps"><li><span class="label">01</span><b>Задача</b><span>Кто клиенты и что им нужно от сайта</span></li><li><span class="label">02</span><b>Структура</b><span>Блоки, тексты и путь до записи</span></li><li><span class="label">03</span><b>Дизайн</b><span>Свой стиль под нишу, без шаблонов</span></li><li><span class="label">04</span><b>Вёрстка</b><span>Адаптив, анимации, онлайн-запись</span></li><li><span class="label">05</span><b>Запуск</b><span>Публикация и проверка на телефоне</span></li></ol>
     </div>
   </section>
 </main>
 
-<footer class="foot" id="contacts">
-  <div class="wrap foot-in">
+<section class="contact" id="contacts">
+  <div class="glow" aria-hidden="true"></div>
+  <div class="wrap contact-in">
+    <h2>Нужен сайт<br>в&nbsp;своём стиле?</h2>
     <div>
-      <h2>Нужен<br>такой&nbsp;же?</h2>
-    </div>
-    <div>
-      <p class="muted">Почта для анонимных писем</p>
+      <p class="label">Почта для анонимных писем</p>
       <a class="mail" href="mailto:hello@portfolio.example">hello@portfolio.example</a>
-      <p class="muted small" style="margin-top:18px">Код всех работ открыт: <a href="https://github.com/stulinskijk-collab" target="_blank" rel="noopener">github.com/stulinskijk-collab</a></p>
+      <p style="color:var(--mut);margin:18px 0 0">Код всех работ открыт: <a href="https://github.com/stulinskijk-collab" target="_blank" rel="noopener" style="text-decoration:underline">github.com/stulinskijk-collab</a></p>
     </div>
-    <div class="foot-bottom">
-      <p class="muted small">© 2026 stulinskijk-collab. Все права защищены.</p>
-      <p class="muted small">Тексты, иллюстрации и дизайн работ охраняются авторским правом. Копирование без согласия автора запрещено. Компании в работах вымышлены.</p>
-    </div>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="wrap foot-in">
+    <span>© 2026 stulinskijk-collab. Все права защищены.</span>
+    <span>Компании в работах вымышлены. Фото на сайтах — <a href="https://unsplash.com" target="_blank" rel="noopener">Unsplash</a>.</span>
   </div>
 </footer>
 
+<div class="peek" id="peek" aria-hidden="true"><img alt=""></div>
+
 <script>
-document.querySelectorAll('.chip').forEach(b => b.addEventListener('click', () => {
-  document.querySelectorAll('.chip').forEach(x => { x.classList.toggle('is-on', x === b); x.setAttribute('aria-pressed', x === b); });
-  document.querySelectorAll('.card').forEach(c => { c.hidden = b.dataset.f !== 'all' && c.dataset.cat !== b.dataset.f; });
+document.querySelectorAll('[data-f]').forEach(b => b.addEventListener('click', () => {
+  document.querySelectorAll('[data-f]').forEach(x => { x.classList.toggle('is-on', x === b); x.setAttribute('aria-pressed', x === b); });
+  document.querySelectorAll('.work').forEach(w => { w.hidden = b.dataset.f !== 'all' && w.dataset.cat !== b.dataset.f; });
 }));
+const peek = document.getElementById('peek'), pimg = peek.querySelector('img');
+document.querySelectorAll('.item').forEach(it => {
+  it.addEventListener('pointerenter', () => { pimg.src = it.dataset.shot; peek.classList.add('show'); });
+  it.addEventListener('pointerleave', () => peek.classList.remove('show'));
+  it.addEventListener('pointermove', e => { peek.style.left = Math.min(e.clientX + 24, innerWidth - 300) + 'px'; peek.style.top = (e.clientY - 90) + 'px'; });
+});
 </script>
 </body>
 </html>
