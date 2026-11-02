@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Портфолио — сайты для малого бизнеса</title>
+<title>Объём — сайты для малого бизнеса</title>
 <meta name="description" content="11 работ: концепт-сайты для студий и сервисов и веб-приложение. Свой дизайн для каждой ниши, фото, онлайн-запись, адаптив.">
 <meta name="theme-color" content="#0D0E10">
 <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
@@ -16,7 +16,7 @@
 
 <header class="top">
   <div class="wrap top-in">
-    <a href="#" class="logo">Портфолио<sup>©</sup></a>
+    <a href="#" class="logo">Объём<sup>°</sup></a>
     <nav class="nav" aria-label="Разделы">
       <a class="pill pill-sm" href="#works">Работы</a>
       <a class="pill pill-sm" href="#all">Все проекты</a>
@@ -37,12 +37,19 @@
         <div class="cta"><a class="pill pill-light" href="#contacts">Обсудить сайт</a><a class="pill" href="#works">Смотреть работы</a></div>
       </div>
       <ul class="stats reveal">
-        <li><b>11</b><span>работ в портфолио</span></li>
+        <li><b>11</b><span>работ в витрине</span></li>
         <li><b>8</b><span>разных стилей</span></li>
         <li><b>0</b><span>конструкторов</span></li>
       </ul>
     </div>
-    <p class="mark" aria-hidden="true">Портфолио</p>
+    <div class="mark-wrap" aria-hidden="true">
+      <img class="tunnel" src="img/3d/folio-tunnel.jpg" alt="">
+      <p class="mark"><span style="--i:0">О</span><span style="--i:1">б</span><span style="--i:2">ъ</span><span style="--i:3">ё</span><span style="--i:4">м</span></p>
+      <div class="fly f-a" data-depth="1.6"><img src="img/3d/igla-skull.jpg" alt=""></div>
+      <div class="fly f-b" data-depth="1"><img src="img/3d/korzh-slice.jpg" alt=""></div>
+      <div class="fly f-c" data-depth="2"><img src="img/3d/gul-megaphone.jpg" alt=""></div>
+    </div>
+    <div class="ticker" aria-hidden="true"><div class="ticker-track"><span>Барбершоп</span><span>Студия йоги</span><span>Тату-студия</span><span>Студия звукозаписи</span><span>Веломастерская</span><span>Банный клуб</span><span>Школа выпечки</span><span>Груминг-салон</span><span>Барбершоп</span><span>Студия йоги</span><span>Тату-студия</span><span>Студия звукозаписи</span><span>Веломастерская</span><span>Банный клуб</span><span>Школа выпечки</span><span>Груминг-салон</span></div></div>
   </section>
 
   <section class="works" id="works">
@@ -145,6 +152,7 @@
 
   <section class="process" id="process">
     <div class="glow" aria-hidden="true"></div>
+    <img class="caustic" src="img/3d/folio-caustic.jpg" alt="" aria-hidden="true">
     <div class="wrap">
       <p class="label">Как работаю</p>
       <h2>От задачи до сайта на телефоне клиента</h2>
@@ -169,8 +177,8 @@
 
 <footer class="foot">
   <div class="wrap foot-in">
-    <span>© 2026 stulinskijk-collab. Все права защищены.</span>
-    <span>Компании в работах вымышлены. Фото на сайтах — <a href="https://unsplash.com" target="_blank" rel="noopener">Unsplash</a>.</span>
+    <span>© 2026 Объём · stulinskijk-collab. Все права защищены.</span>
+    <span>Компании в работах вымышлены. Фото на сайтах — <a href="https://unsplash.com" target="_blank" rel="noopener">Unsplash</a>, 3D — <a href="https://www.magnific.com/ru/free-photos-vectors/3d" target="_blank" rel="noopener">Magnific</a> (magnific, lunail, Tanzim Graphics Zone, upklyak).</span>
   </div>
 </footer>
 
@@ -187,6 +195,29 @@ document.querySelectorAll('.item').forEach(it => {
   it.addEventListener('pointerleave', () => peek.classList.remove('show'));
   it.addEventListener('pointermove', e => { peek.style.left = Math.min(e.clientX + 24, innerWidth - 300) + 'px'; peek.style.top = (e.clientY - 90) + 'px'; });
 });
+
+// появление при прокрутке и параллакс 3D-объектов
+if (!matchMedia('(prefers-reduced-motion: reduce)').matches && !/still/.test(location.search)) {
+  const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { rootMargin: '0px 0px -10% 0px' });
+  document.querySelectorAll('.work, .item, .steps li, .line, .sec-top, .process h2, .process .lead, .contact h2').forEach((el, i, all) => {
+    const sib = [...el.parentElement.children].indexOf(el);
+    el.style.setProperty('--d', Math.min(sib, 6) * 80 + 'ms');
+    if (el.getBoundingClientRect().top > innerHeight * .9) { el.classList.add('fx'); io.observe(el); } else el.classList.add('in');
+  });
+  const flies = [...document.querySelectorAll('.fly')];
+  let mx = 0, my = 0, px = 0, py = 0;
+  addEventListener('pointermove', e => { mx = e.clientX / innerWidth - .5; my = e.clientY / innerHeight - .5; }, { passive: true });
+  (function loop() {
+    px += (mx - px) * .06; py += (my - py) * .06;
+    flies.forEach(f => { const d = +f.dataset.depth; f.style.transform = 'translate(' + px * 40 * d + 'px,' + (py * 30 * d - scrollY * .15 * d) + 'px) rotateY(' + px * 25 + 'deg) rotateX(' + -py * 20 + 'deg)'; });
+    requestAnimationFrame(loop);
+  })();
+  document.querySelectorAll('.stats b').forEach(b => {
+    const end = parseInt(b.textContent, 10); if (!end) return;
+    const t0 = performance.now() + 300;
+    (function tick(now) { const k = Math.min(1, Math.max(0, (now - t0) / 1200)); b.textContent = Math.round(end * (1 - Math.pow(1 - k, 3))); if (k < 1) requestAnimationFrame(tick); })(t0);
+  });
+}
 </script>
 </body>
 </html>
